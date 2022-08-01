@@ -1,0 +1,16 @@
+{
+  "id": "3558665",
+  "name": "dkd",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "帝可得",
+  "glyphs": [
+    {
+      "icon_id": "26420126",
+      "name": "闭眼",
+      "font_class": "biyan",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    }
+  ]
+}
