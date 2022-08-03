@@ -110,13 +110,12 @@ export default {
     isShow() {
       this.isshow = !this.isshow;
     },
-    loginFn() {
-      if(!this.loginFormRules) return
-      this.$store.dispatch("user/getToken", this.loginForm);
-      if (this.$store.state.user.token !== "") {
-        console.log(112211);
-        this.$router.push("/");
-      }
+    async loginFn() {
+      await this.$refs.loginForm.validate();
+      await this.$store.dispatch("user/getToken", this.loginForm);
+      this.$router.push("/");
+       // 成功提示
+     this.$message.success('登陆成功')
     },
     imgFn() {
       this.loginForm.clientToken = Math.round(Math.random() * 100);

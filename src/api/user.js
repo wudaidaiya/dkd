@@ -1,15 +1,20 @@
-import request from '@/utils/request'
+import request from "@/utils/request";
 
-export function login(data){
+export function login(data) {
   return request({
-    url:'/user-service/user/login',
-    headers: {'Content-Type': 'application/json'},
-    method: 'POST',
+    url: "/user-service/user/login",
+    headers: { "Content-Type": "application/json" },
+    method: "POST",
     data,
-  })
+  });
 }
-export function imgcode(params){
+export function imgcode(params) {
   return request({
-    url:`/user-service/user/imageCode/${params}`,
-  })
+    url: `/user-service/user/imageCode/${params}`,
+  });
+}
+export function getUserInfoApi(params) {
+  return request({
+    url: `/user-service/user/${params}`,
+  });
 }
